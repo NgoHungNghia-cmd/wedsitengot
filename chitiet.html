@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết sản phẩm</title>
+    <link rel="stylesheet" href="sanpham.css"> 
+    <link rel="stylesheet" href="chitiet.css"> 
+</head>
+<body>
+    <header id="header-container"></header>
+    
+    <div class="top-banner">
+        <div class="left">/ᐠ｡ꞈ｡ᐟ\</div>
+        <div class="banner-content">
+            <h1 id="view-category">Sản phẩm</h1>
+            <p>Trang chủ / <span id="view-name-mini">Chi tiết</span></p>
+        </div>
+        <div class="right">/ᐠ｡ꞈ｡ᐟ\</div>
+    </div>
+
+    <main class="container-detail">
+        <div class="detail-left">
+            <div class="main-img-container">
+                <img id="view-img" src="" alt="Hình ảnh sản phẩm">
+            </div>
+            <div id="thumb-list" class="thumb-list">
+                </div>
+        </div>
+
+
+        
+
+        <div class="detail-right">
+            <h1 id="view-name"></h1>
+                <div class="product-rating">
+    <div class="stars">
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star-half">★</span>
+    </div>
+    <span class="rating-value">4.3</span>
+    <span class="review-count">(27 đánh giá)</span>
+</div>
+
+<h2 id="view-price"></h2>
+            <h2 id="view-price"></h2>
+            
+            <p id="view-mota" class="short-description">
+                Bánh tươi trong ngày, không chất bảo quản. Hương vị thơm ngon tự nhiên từ nguyên liệu cao cấp nhất của MeoMeo Bakery.
+            </p>
+
+            <div class="action-bar">
+                <div class="quantity-selector">
+                    <button onclick="changeQty(-1)">-</button>
+                    <input type="number" id="view-qty" value="1" min="1" readonly>
+                    <button onclick="changeQty(1)">+</button>
+                </div>
+                <button class="btn-add-cart" onclick="addToCartFromDetail()">
+                    THÊM VÀO GIỎ HÀNG
+                </button>
+            </div>
+
+            <div class="product-meta">
+                <p><strong>SKU:</strong> <span id="view-sku"></span></p>
+                <p><strong>Danh mục:</strong> <span id="view-category-text"></span></p>
+            </div>
+
+            <div class="social-share">
+                <a href="#"><img src="sanpham/icons/fb.png" onerror="this.src='https://cdn-icons-png.flaticon.com/512/733/733547.png'" alt="FB"></a>
+                <a href="#"><img src="sanpham/icons/tw.png" onerror="this.src='https://cdn-icons-png.flaticon.com/512/733/733579.png'" alt="TW"></a>
+                <a href="#"><img src="sanpham/icons/mail.png" onerror="this.src='https://cdn-icons-png.flaticon.com/512/561/561127.png'" alt="Mail"></a>
+                <a href="#"><img src="sanpham/icons/share.png" onerror="this.src='https://cdn-icons-png.flaticon.com/512/1828/1828951.png'" alt="Share"></a>
+            </div>
+        </div>
+    </main>
+
+    <section class="related-products">
+    <h2 class="related-title">CÁC SẢN PHẨM KHÁC</h2>
+    <div id="related-list" class="related-list">
+        </div>
+</section>
+
+
+
+
+<h2 id="view-price"></h2>
+
+    <div id="footer"></div>
+
+<script src="sanpham.js"></script>
+<script src="chitiet.js"></script>
+</body>
+</html>

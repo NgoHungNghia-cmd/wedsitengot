@@ -1,0 +1,163 @@
+/* Thiết lập chung */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fdf8ee; /* Màu nền kem nhạt của toàn trang */
+    font-family: "Poppins", sans-serif;
+}
+
+/* --- BANNER --- */
+.top-banner {
+    width: 100%;
+    height: 180px;
+    background-color: #ffffff; /* Nền trắng cho banner sạch sẽ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px; /* Khoảng cách giữa chữ và icon mèo */
+    border-bottom: 1px solid #eee;
+}
+
+
+
+.left, .right {
+    font-size: 60px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* --- LOGIN FORM SECTION --- */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Để form không bị quá thấp */
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+/* Thêm đoạn này vào file CSS của bạn */
+.banner-content {
+    display: flex;
+    flex-direction: column; /* Xếp chữ h1 và p theo hàng dọc */
+    align-items: center;    /* Căn giữa chữ theo chiều ngang */
+    text-align: center;     /* Đảm bảo nội dung chữ bên trong cũng ở giữa */
+}
+
+/* Giữ nguyên các phần này hoặc điều chỉnh nhẹ */
+.banner-content h1 {
+    font-size: 36px;
+    color: #e67e22; 
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.banner-content p {
+    color: #999;
+    font-size: 14px;
+    margin-top: 5px;
+}
+.login__form {
+    background-color: #ffa500; /* Màu cam đậm của form */
+    padding: 2.5rem;
+    border-radius: 2rem;
+    width: 400px;
+    box-shadow: 0 15px 35px rgba(230, 126, 34, 0.2);
+}
+
+.login__title {
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 2rem;
+    text-transform: lowercase;
+}
+
+.login__box {
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #fff; /* Dòng kẻ trắng dưới input */
+}
+
+.login__box-input {
+    position: relative;
+}
+
+.login__input {
+    width: 100%;
+    padding: 10px 0;
+    background: none;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.login__label {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    color: #fff;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+/* Hiệu ứng label bay lên khi click hoặc có chữ */
+.login__input:focus + .login__label,
+.login__input:not(:placeholder-shown) + .login__label {
+    top: -15px;
+    font-size: 0.8rem;
+}
+
+/* Checkbox & Forgot */
+.login__check {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    font-size: 0.8rem;
+    margin-bottom: 2rem;
+}
+
+.login__check-group {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.login__forgot {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Nút Login */
+.login__button {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.8rem;
+    border: none;
+    background-color: #fff;
+    color: #ffa500;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    transition: 0.3s;
+}
+
+.login__button:hover {
+    background-color: #eee;
+}
+
+.login__register {
+    text-align: center;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+.login__register a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: underline;
+}

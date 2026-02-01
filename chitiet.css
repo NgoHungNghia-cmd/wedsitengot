@@ -1,0 +1,379 @@
+.top-banner {
+
+    width: 100%;
+    height: 200px; /* Độ cao của khung */
+    background-color: #fcfbf4; /* Màu nền vàng nhạt giống ảnh mẫu */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+.banner-content h1 {
+    margin: 0;
+    font-size: 40px;
+    color: #e67e22; /* Màu cam đậm cho chữ Tuyển Dụng */
+    text-transform: uppercase; /* Viết hoa toàn bộ */
+    letter-spacing: 2px;
+}
+
+.banner-content {
+    display: flex;
+    flex-direction: column; /* Xếp tên danh mục và đường dẫn theo hàng dọc */
+    align-items: center;    /* Căn giữa các thành phần con */
+}
+
+.banner-content p {
+    margin: 10px 0 0 0;
+    font-size: 16px;
+    color: #bdc3c7; /* Màu xám nhạt cho dòng Trang chủ / Tuyển dụng */
+}
+
+
+.right, .left{
+    font-size: 100px;
+}
+
+/* Container chính */
+.container-detail {
+    display: flex;
+    padding: 60px 20px;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+/* Bên trái: Ảnh */
+.detail-left {
+    flex: 1;
+}
+
+.detail-left img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.detail-left img:hover {
+    transform: scale(1.02);
+}
+
+/* Bên phải: Thông tin */
+.detail-right {
+    flex: 1;
+}
+
+#view-name {
+    font-size: 40px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+#view-price {
+    font-size: 28px;
+    color: #f39c12;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.description {
+    color: #7f8c8d;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.description ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+/* Cụm chọn số lượng và nút mua */
+.action-bar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.quantity-selector {
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.quantity-selector button {
+    padding: 10px 15px;
+    background: #f9f9f9;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.quantity-selector button:hover {
+    background: #eee;
+}
+
+.quantity-selector input {
+    width: 50px;
+    text-align: center;
+    border: none;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    font-weight: bold;
+}
+
+.btn-add-cart {
+    padding: 15px 40px;
+    background: #f39c12;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.btn-add-cart:hover {
+    background: #e67e22;
+    box-shadow: 0 5px 15px rgba(230, 126, 34, 0.3);
+}
+
+/* Responsive cho mobile */
+@media (max-width: 768px) {
+    .container-detail {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .action-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+
+
+/* Ảnh nhỏ (Thumbnails) */
+.thumb-list {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    justify-content: center;
+}
+
+.thumb-item {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.thumb-item:hover {
+    border-color: #f39c12;
+}
+
+/* Thông tin bổ sung */
+.product-meta {
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px dotted #ccc;
+    font-size: 14px;
+    color: #555;
+}
+
+.product-meta p { margin: 5px 0; }
+.product-meta strong { color: #333; }
+
+.short-description {
+    color: #666;
+    margin: 15px 0;
+    font-style: italic;
+}
+
+/* Social Share */
+.social-share {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.social-share img {
+    width: 30px;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.social-share img:hover { opacity: 1; }
+
+
+/**/
+.related-products {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.related-title {
+    font-size: 24px;
+    color: #f39c12;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.related-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Chia làm 4 cột */
+    gap: 20px;
+}
+
+.related-item {
+    border: 1px solid #eee;
+    padding: 15px;
+    transition: 0.3s;
+    cursor: pointer;
+    background: #fff;
+}
+
+.related-item:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transform: translateY(-5px);
+}
+
+.related-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+}
+
+.related-item h3 {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.related-item p {
+    color: #f39c12;
+    font-weight: bold;
+}
+
+/* Responsive cho điện thoại */
+@media (max-width: 768px) {
+    .related-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Container chứa các ảnh nhỏ */
+.thumb-list {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    justify-content: flex-start; /* Căn trái giống BreadTalk */
+    overflow-x: auto; /* Cho phép lướt ngón tay trên điện thoại */
+    padding-bottom: 5px;
+}
+
+.thumb-item {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.thumb-item:hover {
+    border-color: #f39c12; /* Màu cam khi hover */
+}
+
+.thumb-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Giữ ảnh không bị méo */
+}
+
+/* Hiệu ứng chuyển ảnh chính */
+#view-img {
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Style cho phần đánh giá sao */
+.product-rating {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.stars {
+    color: #f1c40f; /* Màu vàng của sao */
+    font-size: 30px;
+}
+
+.star-half {
+    position: relative;
+    display: inline-block;
+    color: #ddd; /* Màu sao trống */
+}
+
+.star-half::before {
+    content: '★';
+    position: absolute;
+    left: 0;
+    width: 50%; /* Tô màu một nửa */
+    overflow: hidden;
+    color: #f1c40f;
+}
+
+.rating-value {
+    font-weight: bold;
+    font-size: 28px;
+    color: #2c3e50;
+}
+
+.review-count {
+    color: #7f8c8d;
+    font-size: 14px;
+}
+
+#view-name {
+    display: block;      /* Đảm bảo nó là một khối riêng biệt */
+    width: fit-content;  /* Chiều rộng vừa đủ bằng nội dung chữ */
+    margin-left: auto;   /* Đẩy toàn bộ khối này về bên phải */
+    
+    /* Giữ nguyên các định dạng chữ của bạn ở dưới này */
+    font-size: 40px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-right: 245px;
+}
+
+.btn-view-now:hover {
+    background-color: #f39c12;
+    color: #fff;
+    transition: 1s;
+}
+
+.btn-view-now {
+    background-color: transparent;
+    font-size: 20px;
+    color: #333;
+}

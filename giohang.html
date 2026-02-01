@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="giohang.css">
+</head>
+<body>
+
+<header id="header-container"></header>
+
+<div class="top-banner">
+
+<div class="left">/ᐠ｡ꞈ｡ᐟ\</div>
+
+    <div class="banner-content">
+        <h1>Giỏ hàng</h1>
+        <p>Trang chủ / Giỏ hàng</p>
+    </div>
+
+<div class="right">/ᐠ｡ꞈ｡ᐟ\</div>
+
+</div>
+
+
+    <div class="cart-container">
+    <h2>GIỎ HÀNG CỦA BẠN</h2>
+    <table class="cart-table">
+        <thead>
+            <tr>
+                <th>Xóa</th>
+                <th>Sản phẩm</th>
+                <th>Giá</th>
+                <th>Số lượng</th>
+                <th>Tổng phụ</th>
+            </tr>
+        </thead>
+        <tbody id="cart-items">
+            </tbody>
+    </table>
+
+    <div class="cart-footer">
+        <button class="btn-update" onclick="renderCart()">Cập nhật giỏ hàng</button>
+    </div>
+
+    <div class="cart-totals">
+        <h3>Tổng tiền</h3>
+        <table>
+            <tr>
+                <td>Tổng phụ</td>
+                <td id="subtotal">0đ</td>
+            </tr>
+            <tr>
+                <td>Vận chuyển</td>
+                <td>
+                    <input type="radio" checked> Giao hàng tận nơi <br>
+                    <small>Giao hàng đến <b>Thành phố Hồ Chí Minh</b></small>
+                </td>
+            </tr>
+            <tr class="final-total">
+                <td>Tổng</td>
+                <td id="total-bill">0đ</td>
+            </tr>
+        </table>
+        <button class="btn-checkout" onclick="handleCheckout()">Tiến hành thanh toán</button>
+    </div>
+</div>
+
+
+<div id="footer"></div>
+
+
+<script src="giohang.js"></script>
+
+<script>
+fetch("menu.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("header-container").innerHTML = data;
+                // Nếu menu mobile không bấm được, bạn hãy copy code main.js vào đây
+            });
+
+
+  fetch("footer.html")
+    .then(res => res.text())
+    .then(data => document.getElementById("footer").innerHTML = data);
+
+
+</script> 
+
+
+</body>
+</html>

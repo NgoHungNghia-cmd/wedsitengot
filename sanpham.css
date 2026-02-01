@@ -1,0 +1,234 @@
+.top-banner {
+
+    width: 100%;
+    height: 200px; /* Độ cao của khung */
+    background-color: #fcfbf4; /* Màu nền vàng nhạt giống ảnh mẫu */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+.banner-content h1 {
+    margin: 0;
+    font-size: 40px;
+    color: #e67e22; /* Màu cam đậm cho chữ Tuyển Dụng */
+    text-transform: uppercase; /* Viết hoa toàn bộ */
+    letter-spacing: 2px;
+}
+
+.banner-content p {
+    margin: 10px 0 0 0;
+    font-size: 16px;
+    color: #bdc3c7; /* Màu xám nhạt cho dòng Trang chủ / Tuyển dụng */
+}
+
+
+.right, .left{
+    font-size: 100px;
+}
+
+
+
+
+
+/*code nút bấm*/
+/* Tổng thể font chữ và căn giữa */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Tiêu đề DANH MỤC SẢN PHẨM (Nếu bạn muốn thêm) */
+h2 {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 50px;
+    letter-spacing: 1px;
+}
+
+/* Menu điều hướng */
+.category-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    max-width: 750px;
+    margin: 30px auto;
+}
+
+/* Style cho các nút bấm Category */
+.category-menu button {
+    background-color: transparent;
+    border: 1px solid #f39c12; /* Màu cam của viền */
+    color: #555;
+    padding: 10px 25px;
+    min-width: 120px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+/* Hiệu ứng khi di chuột vào nút */
+.category-menu button:hover {
+    background-color: #f39c12;
+    color: white;
+}
+
+/* Phần tiêu đề BUNS ở dưới có gạch ngang hai bên */
+h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f39c12;
+    font-size: 32px;
+    margin: 40px 0;
+}
+
+h2::before, h2::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #ccc;
+    max-width: 150px;
+    margin: 0 20px;
+}
+
+
+
+/* Nút Xem thêm */
+.btnxem .btn {
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    padding: 12px 40px;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 30px;
+    transition: background 0.3s;
+}
+
+.btnxem .btn:hover {
+    background-color: #e67e22;
+}
+
+h1 {
+    display: flex;
+    justify-content: left;
+    color: #000000;
+    font-size: 32px;
+    margin: 40px 0;
+    margin-left: 300px;
+}
+
+
+
+
+/*code trang trí cho sanpham.js*/
+/* Tìm và thay thế đoạn .products-container cũ bằng đoạn này */
+[id^="grid-"] {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Chia 4 cột */
+    gap: 20px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+
+.product-item {
+    border: 1px solid #eee;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Đảm bảo các thành phần bên trong xếp dọc */
+    justify-content: space-between;
+    background: #fff;
+}
+
+.product-item:hover {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Đổ bóng nhẹ khi rê chuột vào */
+    transform: translateY(-5px);           /* Bánh hơi nhích lên một chút */
+}
+
+.product-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.product-item p {
+    color: #f39c12;
+    font-weight: bold;
+}
+
+.product-item button {
+    border: 1px solid #333;
+    background: transparent;
+    padding: 5px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.product-item h3 {
+    height: 50px;        /* Cố định chiều cao tên bánh để nút bấm thẳng hàng */
+    overflow: hidden;
+    font-size: 18px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.btn-cart:hover {
+    background-color: #f39c12;
+    color: #fff;
+    transition: 1s;
+}
+
+.btnxem {
+    padding-bottom: 50px;
+}
+
+.quantity-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin: 10px 0;
+}
+
+.quantity-selector button {
+    width: 30px !important; /* Ghi đè padding cũ của button sản phẩm */
+    height: 30px;
+    padding: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.quantity-selector input {
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    border: 1px solid #ddd;
+    outline: none;
+    
+}
+
+/* Ẩn mũi tên tăng giảm mặc định của trình duyệt */
+.quantity-selector input::-webkit-outer-spin-button,
+.quantity-selector input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+

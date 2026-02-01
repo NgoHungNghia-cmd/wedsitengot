@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sanpham.css">
+</head>
+<body>
+
+
+<header id="header-container"></header>
+    
+<div class="top-banner">
+
+<div class="left">/ᐠ｡ꞈ｡ᐟ\</div>
+
+    <div class="banner-content">
+        <h1>Sản phẩm</h1>
+        <p>Trang chủ / Sản phẩm</p>
+    </div>
+
+<div class="right">/ᐠ｡ꞈ｡ᐟ\</div>
+
+</div>
+
+<div>
+<h1>DANH MỤC SẢN PHẨM</h1>
+
+<nav class="category-menu">
+    <button onclick="filter('Buns')">Buns</button>
+    <button onclick="filter('Toasts')">Toasts</button>
+    <button onclick="filter('Cakes')">Cakes</button>
+    <button onclick="filter('Slices-Cakes')">Slices Cakes</button>
+    <button onclick="filter('Dry-Cakes')">Dry Cakes</button>
+    <button onclick="filter('Drink')">Drink</button>
+    <button onclick="filter('Other')">Other</button>
+    <button onclick="filter('Cookie')">Cookie</button>
+    <button onclick="filter('Euro-Bread')">Euro Bread</button>
+</nav>
+
+<h2 id="scroll-Buns" class="category-title">BUNS</h2>
+<div id="grid-Buns" class="products-container"></div>
+<div class="btnxem"><button class="btn" onclick="loadMore('Buns')">Xem thêm</button></div>
+
+<h2 id="scroll-Toasts" class="category-title">TOASTS</h2>
+<div id="grid-Toasts" class="products-container"></div>
+<div class="btnxem"><button class="btn" onclick="loadMore('Toasts')">Xem thêm</button></div>
+
+<h2 id="scroll-Dry-Cakes" class="category-title">DRY CAKES</h2>
+<div id="grid-Dry-Cakes" class="products-container"></div>
+<div class="btnxem"><button class="btn" onclick="loadMore('Dry-Cakes')">Xem thêm</button></div>
+
+<h2 id="scroll-Cakes" class="category-title">CAKES</h2>
+<div id="grid-Cakes" class="products-container"></div>
+<div class="btnxem"><button class="btn" onclick="loadMore('Cakes')">Xem thêm</button></div>
+
+<h2 id="scroll-Slices-Cakes" class="category-title">SLICES CAKES</h2>
+<div id="grid-Slices-Cakes" class="products-container"></div>
+<div class="btnxem"><button class="btn" onclick="loadMore('Slices-Cakes')">Xem thêm</button></div>
+
+<h2 id="scroll-Drink" class="category-title">DRINK</h2>
+<div id="grid-Drink" class="products-container"></div>
+<div class="btnxem"><button class="btn" onclick="loadMore('Drink')">Xem thêm</button></div>
+
+<h2 id="scroll-Cookie" class="category-title">COOKIE</h2>
+<div id="grid-Cookie" class="products-container"></div>
+<div class="btnxem"><button class="btn" onclick="loadMore('Cookie')">Xem thêm</button></div>
+
+<h2 id="scroll-Other" class="category-title">SẢN PHẨM KHÁC</h2>
+<div id="grid-Other" class="products-container"></div>
+<div class="btnxem"><button class="btn" onclick="loadMore('Other')">Xem thêm</button></div>
+
+<h2 id="scroll-Euro-Bread" class="category-title">EURO BREAD</h2>
+<div id="grid-Euro-Bread" class="products-container"></div>
+<div class="btnxem"><button class="btn" onclick="loadMore('Euro-Bread')">Xem thêm</button></div>
+
+</div>
+
+
+
+<div id="footer"></div>
+
+<script src="sanpham.js"></script>
+
+<script>
+fetch("menu.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("header-container").innerHTML = data;
+                // Nếu menu mobile không bấm được, bạn hãy copy code main.js vào đây
+            });
+
+
+  fetch("footer.html")
+    .then(res => res.text())
+    .then(data => document.getElementById("footer").innerHTML = data);
+
+
+</script>  
+
+
+</body>
+</html>

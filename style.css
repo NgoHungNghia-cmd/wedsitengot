@@ -1,0 +1,309 @@
+/*background1*/
+/*tieu de*/
+section { 
+  margin-bottom: 10px; 
+  display: flex; 
+  flex-flow: row wrap; 
+} 
+#banner { 
+  padding-top: 2rem;
+  min-height: auto;
+  width: 100%; 
+  background-color: #fdf8ee; 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  display: flex; 
+  align-items: center; 
+  padding: 20px 5%; 
+  box-sizing: border-box; 
+
+} 
+#banner .box-left { 
+  width: 50%; 
+}
+#banner .box-left h2 {
+  font-size: clamp(30px, 5vw, 70px); 
+  margin-top: 20px; 
+  color: #D1BB91; 
+  line-height: 1.2; 
+}
+#banner .box-left .tieude { 
+  color: #D1BB91; 
+  font-size: clamp(20px, 4vw, 50px); 
+}
+#banner .box-right { 
+  width: 50%; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 15px; 
+}
+#banner .box-right img { 
+  width: 30%; 
+  height: auto; 
+  border-radius: 10px; 
+  animation: animation 3s infinite linear; 
+}
+#banner .box-right img:nth-child(1) { 
+  animation-delay: 0.5s; 
+}
+#banner .box-right img:nth-child(2) { 
+  animation-delay: 1s; 
+} 
+/* animation */
+@keyframes animation { 
+  0%, 100% 
+  { 
+  transform: translateY(0px); 
+} 
+50% 
+{ 
+  transform: translateY(-15px); 
+} 
+} 
+/*font chu*/
+@font-face { font-family: font; 
+  src: url("./font/ScienceGothic_UltraCondensed-Bold.ttf"); 
+} 
+.tieude { 
+  font-family: font; 
+} 
+
+
+/*background2*/
+
+
+/*background danh sach san pham*/
+.shop-container { 
+  position: relative; 
+  background-image: url("./anh/backgroud3.png"); 
+  width: 100%; 
+  min-height: 100vh; 
+  color: #fff; 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  padding: 60px 20px; 
+  box-sizing: border-box; 
+  overflow: hidden; 
+} 
+.shop-container h2 { 
+  font-size: clamp(24px, 4vw, 45px); 
+  margin-bottom: 20px; 
+} 
+#slide { 
+  display: flex; 
+  justify-content: center; 
+  align-items: flex-end; 
+  gap: 60px; 
+  width: 1300px; 
+  margin: 20px auto; 
+  flex-wrap: nowrap; 
+
+  
+} 
+
+.item { 
+  flex: 0 0 220px; 
+  text-align: center; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+  
+} 
+.item img { 
+  width: 100%; 
+  height: 220px; 
+  object-fit: contain; 
+  display: block; 
+  filter: drop-shadow(0 10px 15px rgba(0,0,0,0.3)); 
+} 
+.name { 
+  font-size: 24px; 
+  margin-top: 15px; 
+  text-transform: uppercase; 
+  font-weight: bold; 
+  width: 100%; 
+  color: #fff;
+} 
+.buttons { 
+  position: absolute; 
+  bottom: 25%; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  display: flex; 
+  gap: 30px; 
+  z-index: 10;
+
+}
+.buttons button {
+  align-items: center; 
+  width: 62px; 
+  height: 62px; 
+  border-radius: 50%; 
+  border: 2px solid #ffffff; 
+  background: rgba(255, 255, 255, 0.1); 
+  color: #ffa500; 
+  font-size: 20px; 
+  cursor: pointer; 
+  transition: 0.5s; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+} 
+.buttons button:hover { 
+  background-color: #ffa500; 
+  color: #fff; 
+} 
+
+.full{
+  display: block;          /* Đảm bảo nút chiếm một hàng riêng */
+    margin: 120px auto 20px; /* 40px cách trên (để nằm dưới 2 nút < >), auto để căn giữa */
+    position: relative;
+    font-size: 25px;
+    border: 2px solid #ffffff;
+    background: rgba(255, 255, 255, 0.1); 
+    padding: 15px 35px;
+    cursor: pointer;
+    color: #ffffff !important; /* Ép màu trắng, xóa màu xanh/tím của link */
+    text-decoration: none;     /* Xóa gạch chân */
+    border-radius: 10px;      /* Bo góc đều hơn 15% */
+    width: fit-content;       /* Độ rộng vừa khít với chữ */
+    transition: 0.3s;
+  
+}
+
+.full:hover {
+  background: #fff;
+  transition: 1s;
+  color: #ffa500
+}
+
+
+/*background3*/
+
+/*BACKGROUND SAN PHAM NOI BAT*/
+.chumo{ font-family: font; 
+  src: url("./font/ScienceGothic_UltraCondensed-Bold.ttf"); 
+}
+
+.chumo {
+  margin-top: 0;
+  font-size: 150px;
+  opacity: 0.05;
+  text-align: center;
+  line-height: 1;
+}
+
+.background-container2 {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background-color: #fdf8ee;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Tiêu đề đứng yên một chỗ phía trên bên phải */
+.background-container2 h2 {
+    position: absolute;
+    top: 60px;
+    right: 180px;
+    font-size: 60px;
+    color: #D1BB91;
+    margin: 0;
+    z-index: 15; /* Nằm trên cả linh vật và nội dung */
+}
+
+/* Con mèo/linh vật đứng yên bên trái */
+.linh-vat {
+    position: absolute;
+    bottom: 100px;
+    left: 100px;
+    width: 400px;
+    height: auto;
+    z-index: 10;
+}
+
+/* Khung chứa nội dung trượt */
+#product-wrapper2 {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/* Từng khối nội dung trượt qua lại */
+.item-feedback {
+    flex: 0 0 100%; /* Đảm bảo mỗi lần trượt là trượt hết 1 khối */
+    display: flex;
+    flex-direction: column;
+    padding-top: 70px;
+    padding-left: 50%; 
+    padding-right: 10%;
+    box-sizing: border-box;
+}
+
+.noidung {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    margin-top: 100px; /* Đẩy xuống để không đè vào h2 đứng yên */
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+/* Khu vực ảnh khách hàng và tên */
+.customer-img {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.customer-img img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #ccc; /* Hiện màu xám nếu chưa có ảnh */
+    border: 2px dashed #D1BB91;
+}
+
+.customer-img span {
+    font-weight: bold;
+    color: #000;
+}
+
+/* Cụm nút bấm */
+.buttons2 {
+    position: absolute;
+    bottom: 100px;
+    left: 55%;
+    gap: 10px;
+}
+
+.buttons2 button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff;
+  font-size: 20px;
+  color: #ffa500;
+}
+
+.buttons2 button:hover{
+  background-color: #ffa500;
+  color: #fff;
+  transition: 1s;
+}
+
+#header-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Cao nhất */
+}

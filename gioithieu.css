@@ -1,0 +1,132 @@
+.top-banner {
+
+    width: 100%;
+    height: 200px; /* Độ cao của khung */
+    background-color: #fcfbf4; /* Màu nền vàng nhạt giống ảnh mẫu */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+.banner-content h1 {
+    margin: 0;
+    font-size: 40px;
+    color: #e67e22; /* Màu cam đậm cho chữ Tuyển Dụng */
+    text-transform: uppercase; /* Viết hoa toàn bộ */
+    letter-spacing: 2px;
+}
+
+.banner-content p {
+    margin: 10px 0 0 0;
+    font-size: 16px;
+    color: #bdc3c7; /* Màu xám nhạt cho dòng Trang chủ / Tuyển dụng */
+}
+
+/* Đảm bảo phần card bên dưới không bị dính sát vào banner */
+.gallery {
+    margin-top: -100px;
+}
+
+.right, .left{
+    font-size: 100px;
+}
+
+
+.header-section {
+    text-align: center; /* Căn giữa toàn bộ chữ và gạch chân */
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+.header-section h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 10px;
+    text-transform: uppercase; /* Viết hoa toàn bộ chữ */
+    letter-spacing: 1px; /* Khoảng cách giữa các chữ cái cho thoáng */
+}
+
+.header-section .subtitle {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Tạo thanh gạch ngang màu vàng */
+.header-section .yellow-divider {
+    width: 80px; /* Độ dài của thanh gạch ngang */
+    height: 4px; /* Độ dày của thanh gạch ngang */
+    background-color: #ffcc00; /* Màu vàng đặc trưng của BreadTalk */
+    margin: 0 auto; /* Căn giữa thanh gạch ngang */
+}
+
+/* Thiết lập chung */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.info-row {
+    display: flex;
+    align-items: stretch; /* Căn giữa theo chiều dọc */
+    margin-bottom: 40px;
+
+}
+
+/* Đảo ngược vị trí cho các hàng có class .reverse */
+.info-row.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Định dạng phần ảnh */
+.image-box {
+    flex: 1; /* Chiếm 50% độ rộng */
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+
+
+/* Định dạng phần văn bản */
+.text-box {
+    flex: 1;
+    background-color: #fdfaf4; /* Màu kem nhạt */
+    display: flex; /* Biến chính nó thành flex container */
+    align-items: center; /* Căn nội dung chữ vào giữa theo chiều dọc */
+    justify-content: center; /* Căn nội dung chữ vào giữa theo chiều ngang */
+    padding: 40px; /* Tạo khoảng trống xung quanh chữ */
+}
+
+.text-content {
+    max-width: 500px;
+}
+
+.text-box h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.text-box .slogan {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.text-box p {
+    line-height: 1.6;
+    color: #444;
+}
+

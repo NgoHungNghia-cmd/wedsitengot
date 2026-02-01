@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animation Login Form </title>
+  <link rel="stylesheet" href="taikhoan.css">
+  <style>
+  </style>
+</head>
+<body>
+
+<header id="header-container"></header>
+
+<main>
+      <section>
+            <div id="banner"></div>
+      </section>
+
+</main>
+
+
+    <div class="top-banner">
+        <div class="left">/ᐠ｡ꞈ｡ᐟ\</div>
+        <div class="banner-content">
+            <h1>tài khoản</h1>
+            <p>Trang chủ / tài khoản</p>
+        </div>
+        <div class="right">/ᐠ｡ꞈ｡ᐟ\</div>
+    </div>
+
+    <div class="login-container">
+        <form action="" class="login__form" id="auth-form">
+    <h1 class="login__title" id="auth-title">login</h1>
+    
+    <div class="login__content">
+        <div class="login__box">
+            <div class="login__box-input">
+                <input type="email" required class="login__input" placeholder=" ">
+                <label class="login__label">Username</label>
+            </div>
+        </div>
+
+        <div class="login__box">
+            <div class="login__box-input">
+                <input type="password" required class="login__input" id="login-pas" placeholder=" ">
+                <label class="login__label">Password</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="login__check" id="auth-check">
+        <div class="login__check-group">
+            <input type="checkbox" class="login__check-input">
+            <label class="login__check-label">Remember me</label>
+        </div>
+        <a href="#" class="login__forgot">Forgot Password?</a>
+    </div>
+
+    <button type="submit" class="login__button" id="auth-button">Login</button>
+
+   <p class="login__register" id="auth-toggle-text">
+    Don't have an account? <a href="javascript:void(0)" onclick="toggleAuth()">Register</a>
+</p>
+</form>
+    </div>
+
+    <div id="footer"></div>
+
+      <script src="taikhoan.js"></script>
+
+      <script>
+
+fetch("menu.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("header-container").innerHTML = data;
+                // Nếu menu mobile không bấm được, bạn hãy copy code main.js vào đây
+            });
+
+  fetch("footer.html")
+    .then(res => res.text())
+    .then(data => document.getElementById("footer").innerHTML = data);
+</script>
+
+</body>
+</html>

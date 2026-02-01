@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhóm Phát Triển</title>
+    <link rel="stylesheet" href="nhom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head> 
+<body>
+
+<header id="header-container"></header>
+
+<main>
+      <section>
+            <div id="banner"></div>
+      </section>
+</main>
+
+<div class="top-banner">
+    <div class="left">/ᐠ｡ꞈ｡ᐟ\</div>
+    <div class="banner-content">
+        <h1>Nhóm phát triển</h1>
+        <p>Trang chủ / Nhóm phát triển</p>
+    </div>
+    <div class="right">/ᐠ｡ꞈ｡ᐟ\</div>
+</div>
+
+<div class="gallery">
+    <ul class="cards">
+        <li class="card">
+            <img src="anhnut/NgoHungNghia.jpg" alt="">
+            <div class="card-info">
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/share/15X3AnFq4CZ/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <div class="details">
+                    <h3>Ngô Hùng Nghĩa</h3>
+                    <p class="role">Thành viên 2</p>
+                    <p class="desc">Làm phần menu, sản phẩm, giỏ hàng</p>
+                    <div class="tags">
+                        <span>menu.css</span> <span>menu.js</span> <span>menu.html</span>
+                        <span>giohang.css</span> <span>giohang.js</span> <span>giohang.html</span>
+                        <span>sanpham.css</span> <span>sanpham.js</span> <span>sanpham.html</span>
+                    </div>
+                </div>
+            </div>
+        </li>
+        
+        <li class="card">
+            <img src="anhnut/LeThiKhanhHien.jpg" alt="">
+            <div class="card-info">
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/share/18FQ6xBapj/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <div class="details">
+                    <h3>Lê Thị Khánh Hiền</h3>
+                    <p class="role">Thành viên 1</p>
+                    <p class="desc">Làm phần trang chủ, giới thiệu, chi tiết</p>
+                    <div class="tags">
+                        <span>style.css</span> <span>main.js</span> <span>index.html</span>
+                        <span>gioithieu.css</span> <span>gioithieu.html</span>
+                        <span>chitiet.css</span> <span>chitiet.js</span> <span>chitiet.html</span>
+                    </div>
+                </div>
+            </div>
+        </li>
+        
+        <li class="card">
+            <img src="anhnut/HoangThiGiaNhi.png" alt="">
+            <div class="card-info">
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/share/17oaiXKH6E/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <div class="details">
+                    <h3>Hoàng Thị Gia Nhi</h3>
+                    <p class="role">Thành viên 3</p>
+                    <p class="desc">Làm phần tài khoản, footer, nhóm phát triển</p>
+                    <div class="tags">
+                        <span>taikhoan.css</span> <span>taikhoan.js</span> <span>taikhoan.html</span>
+                        <span>footẻ.css</span> <span>footer.html</span>
+                        <span>nhom.css</span> <span>nhom.js</span> <span>nhom.html</span>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+    <div class="nav-buttons">
+        <button id="prev">PREV</button>
+        <button id="next">NEXT</button>
+    </div>
+</div>
+
+<div id="footer"></div>
+
+<script src="nhom.js"></script>
+
+<script>
+    fetch("menu.html")
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById("header-container").innerHTML = data;
+        });
+
+    fetch("footer.html")
+        .then(res => res.text())
+        .then(data => document.getElementById("footer").innerHTML = data);
+</script>   
+
+</body>
+</html>
